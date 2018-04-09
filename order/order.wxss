@@ -1,0 +1,147 @@
+page{
+  height: 100%;
+}
+/*销核订单按钮  */
+button {
+    border-radius: 0;
+}
+
+button::after {
+    border-radius: 0;
+}
+
+button.kill-order {
+    height: 160rpx;
+    background: #fa5a67;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+button.kill-order view {
+    align-self: center;
+}
+
+button.kill-order text {
+    color: #fff;
+    font-size: 40.8rpx;
+}
+
+button.kill-order image {
+    height: 54rpx;
+    width: 54rpx;
+    align-self: center;
+    margin-right: 45.2rpx;
+}
+
+/*选项框  */
+
+view.bannerType {
+    height: 94rpx;
+    background: #fafafa;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+view.bannerType text {
+    font-size: 28rpx;
+    align-self: center;
+}
+
+view.bannerType view {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+/*搜索框  */
+
+view.search {
+    display: flex;
+    flex-direction: row;
+    height: 98rpx;
+    background: #efeff4;
+    align-items: center;
+}
+
+view.searchItem {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    flex-direction: row;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+}
+
+view.searchItem image {
+    height: 42rpx;
+    width: 42rpx;
+    align-self: center;
+    margin-left: 10rpx;
+    margin-right: 20rpx;
+}
+
+view.searchItem input {
+    flex: 1;
+    font-size: 30rpx;
+}
+
+/*列表  */
+view.sview{
+}
+view.scrollView {
+}
+
+scroll-view.content {
+    height: 100%;
+    background: #efeff4;
+}
+
+view.item {
+    height: 194rpx;
+    background: #fff;
+    margin-bottom: 20rpx;
+    padding-left: 20rpx;
+}
+
+view.title text {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    align-content: center;
+    font-size: 26rpx;
+    font-weight: bold;
+}
+
+view.orderInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+view.orderDedail text {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    align-content: center;
+    font-size: 26rpx;
+}
+
+view.orderStatus {
+    margin-right: 48rpx;
+}
+
+view.orderStatus text {
+    font-size: 34rpx;
+}

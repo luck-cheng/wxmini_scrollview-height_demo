@@ -1,0 +1,56 @@
+<view class="pageMain">
+    <button class='kill-order' bindtap='openqr'>
+        <image src='{{qricon}}' />
+        <view>
+            <text>销核订单</text>
+        </view>
+    </button>
+    <view class='bannerType'>
+        <view bindtap='tapAll' style='{{tapAllCss}}'>
+            <text>全部订单</text>
+        </view>
+        <view bindtap='tapNoKill' style='{{tapNoKillCss}}'>
+            <text>未销核</text>
+        </view>
+        <view bindtap='tapKilled' style='{{tapKilledCss}}'>
+            <text>已销核</text>
+        </view>
+        <view bindtap='tapRefund' style='{{tapRefundCss}}'>
+            <text>退款</text>
+        </view>
+    </view>
+    <view class='search'>
+        <view class='searchItem'>
+            <image src='{{searchicon}}' />
+            <input placeholder='请输入订单号'></input>
+        </view>
+    </view>
+    <scroll-view class='content' bindscrolltolower="nextPage" scroll-y="true" style='height:{{scrollViewHeith}}px'>
+        <block wx:for="{{orderData.content}}" wx:for-index="index" wx:for-item="item">
+            <view class='item'>
+                <view class='title'>
+                    <text>{{item.orderName}}</text>
+                </view>
+                <view class='title'>
+                    <text>用户微信昵称：{{item.wxNickname}}</text>
+                </view>
+                <view class='orderInfo'>
+                    <view class='orderDedail'>
+                        <text class='orderNum'>订单号：{{item.orderNum}}</text>
+                        <text class='orderTime'>下单时间：{{item.createTime}}</text>
+                    </view>
+                    <view class='orderStatus'>
+                        <text wx:if="{{item.orderStatus == 0}}">未付款</text>
+                        <text wx:if="{{item.orderStatus == 1}}">未销核</text>
+                        <text wx:if="{{item.orderStatus == 2}}">已销核</text>
+                        <text wx:if="{{item.orderStatus == 3}}">退款</text>
+                    </view>
+                </view>
+                <view class='orderDedail'>
+                    <text>价格：{{item.orderPrice}}元</text>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+
+</view>
